@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <title>Folio</title>
+</head>
+<body style="overflow: auto;">
+    <div class="sidenav">
+        <p class="name"><%= user.name %></p>
+        <div class="social-buttons">
+          </div>
+      </div>
+    <% var total = 0; %>
+    <% for (var i = 0; i < projects.length; i++) { %>
+        <div class="fullcontainer">
+            <div class="project_text">
+                <p class="day"><%= projects[i].day %></p>
+                <p class="client_name"><%= projects[i].client_name %></p>
+                <p class="hours"><%= projects[i].hours %></p>
+            </div>
+            <% total += projects[i].hours%>
+        </div> <br><br>
+    <% } %>
+    <h1 class="total"> Total: <%= total %> hours</h1>
+</body>
+</html>

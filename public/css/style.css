@@ -1,0 +1,282 @@
+/* DEFAULT */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  color: black;
+}
+
+code {
+font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+
+/* TEXT */
+p.title {
+margin-left: 200px;
+margin-bottom: 0px;
+color: white;
+font-family: 'Montserrat', sans-serif;
+font-weight: 900;
+font-size: 70px;
+white-space: nowrap;
+}
+
+p.homeBody {
+margin-left: 200px;
+color: white;
+font-family: 'Work Sans', sans-serif;
+font-weight: 300;
+font-size: 25px;
+line-height: 150%;
+}
+
+/* GET STARTED */
+button.start {
+text-decoration: none;
+background: white;
+color: rgb(154, 229, 254);
+border-radius: 40px;
+padding: 10px 20px;
+font-family: 'Work Sans', sans-serif;
+font-size: 32px;
+margin-left: 200px;
+display: inline-block;
+transition: 0.2s;
+border: none;
+outline: none;
+transition: 0.2s;
+}
+
+button.start:hover {
+color: white;
+transition: 0.2s;
+background: linear-gradient(to right,rgb(51,184,252),rgb(137,77,253));
+}
+
+.hero {
+width: 100%;
+height: 100%;
+background-image: url("../images/tpmas.jpg");
+background-position: center;
+background-size: cover;
+position: absolute;
+}
+
+.form-box {
+width: 380px;
+position: relative;
+margin: 6% auto;
+background: #fff;
+padding: 5px;
+}
+
+.form-div {
+background: white;
+}
+
+.form-box2 {
+width: 380px;
+position: relative;
+margin: 6% auto;
+background: #fff;
+padding: 5px;
+}
+
+.input-group {
+position: relative;
+width: 280px;
+transition: 0.5s;
+}
+
+.input-field {
+width: 100%;
+padding: 8px 0;
+margin: 0px 0 15px 0;
+border-left: 0;
+border-top: 0;
+border-right: 0;
+border-bottom: 1px solid #999;
+outline: none;
+background: transparent;
+}
+
+.submit-btn {
+width: 85%;
+padding: 10px 30px;
+cursor: pointer;
+display: block;
+margin: auto;
+background: linear-gradient(to right, rgb(154, 229, 254), rgb(170, 113, 228));
+border: 0;
+outline: none;
+border-radius: 30px;
+}
+
+.login {
+left: 50px;
+}
+
+.have_account {
+text-align: center;
+}
+
+.register {
+text-align: center;
+font-size: 32px;
+font-weight: bold;
+}
+
+.partials-text {
+margin-left: 50px;
+color: red;
+}
+
+.success-text {
+margin-left: 50px;
+color: green;
+}
+
+/* DASHBOARD */ 
+
+.logout{
+position: absolute;
+right: 0;
+margin-right: 25px;
+font-size: 15px;
+}
+.preview{
+position: absolute;
+right: 0;
+margin-right: 100px;
+font-size: 15px;
+}
+.plus{
+border-radius: 50%;
+width: 50px;
+height: 50px;
+font-size: 20px;
+font-weight: bold;
+text-align: center;
+outline: none;
+border:none;
+}
+.add {
+margin: 0;
+position: absolute;
+left: 50%;
+-ms-transform: translate(-50%, 0%);
+transform: translate(-50%, 0%);
+padding-top: 50px;
+padding-bottom: 50px;
+}
+.modal-body {
+display: flex;
+justify-content: center;
+}
+
+.project_name {
+font-weight: bold;
+font-size: 32px;
+}
+
+.project_image {
+height: 310px;
+padding-right: 30px;
+float: left;
+clear: left;
+padding-top: 10px;
+}
+
+.fullcontainer{
+margin-left: 370px;
+padding-top: 70px;
+clear: left;
+color: red;
+font-size: 26px;
+}
+
+.project_desc {
+word-wrap: break-word;
+font-size: 20px;
+text-align: left;
+}
+
+.delete {
+position: absolute;
+top: 10;
+right: 10;
+}
+
+.project_text {
+text-align: center;
+font-size: 40px;
+}
+
+/* PORTFOLIO NEW */
+
+.sidenav {
+height: 100%;
+width: 320px;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background: linear-gradient(to bottom right,rgb(149,219,248),rgb(193,144,235));
+overflow-x: hidden;
+padding-top: 20px;
+}
+
+
+.sidenav a:hover {
+color: #f1f1f1;
+}
+
+.name {
+text-align: center;
+font-size: 32px;
+font-weight: bold;
+color: white;
+font-family: 'Open Sans';
+}
+
+a:hover {
+text-decoration: none;
+}
+
+a {
+text-decoration: none;
+}
+
+a:visited {
+text-decoration: none;
+}
+.total {
+padding-left: 350px;
+padding-top: 70px;
+}
+.logout-1 {
+position: absolute;
+right: 0;
+margin-right: 35px;
+font-size: 35px;
+}
+.logout-2 {
+  position: absolute;
+  right: 0;
+  margin-right: 325px;
+  font-size: 35px;
+}
+.preview-1{
+position: absolute;
+right: 0;
+margin-right: 170px;
+font-size: 35px;
+}

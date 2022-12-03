@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="/css/style.css" rel="stylesheet" type="text/css">
+    </head>
+<body style="overflow: auto;">
+    <a href="/users/logout" class = "logout-1">Logout</a>
+    <% if (user.email !== "office@tpmas.ca") { %>
+    <a href="/users/portfolio/<%= user._id.toString() %>" class="preview-1" target="_blank">Preview</a>
+    <a href="/delete/<%= user._id.toString() %>" class = "logout-2">New Week</a>
+    <div class="sidenav">
+      <p class="name"><%= user.name %></p>
+    </div>
+  <% var total = 0; %>
+  <% for (var i = 0; i < projects.length; i++) { %>
+      <div class="fullcontainer">
+          <div class="project_text">
+              <p class="day"><%= projects[i].day %></p>
+              <p class="client_name"><%= projects[i].client_name %></p>
+              <p class="hours"><%= projects[i].hours %> hours</p> 
+          </div>
+          <% total += projects[i].hours%>
+      </div> <br><br>
+  <% } %>
+  <h1 class="total"> Total: <%= total %> hours</h1>
+
+    <!-- Trigger the modal with a button -->
+    <div class="add">
+        <button type="button" class="btn-info btn-lg plus" data-toggle="modal" data-target="#myModal"><div>+</div></button>    
+    </div> <br><br><br><br>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+     <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add New Job</h4>
+      </div>
+      <div class="modal-body">
+        <form class="input-group" action="/users/dashboard" method="POST" id="project">
+          <div>
+            <label for="day">Day Worked</label>
+            <input
+              class="input-field"
+              name="day"
+              placeholder="Insert the full date."
+              value="<%= typeof hours != 'undefined' ? day : '' %>"
+            />
+        </div>
+            <div>
+              <label for="client_name">Client Name</label>
+              <input
+                class="input-field"
+                name="client_name"
+                placeholder="Insert Customer's Name"
+                value="<%= typeof client_name != 'undefined' ? client_name : '' %>"
+              />
+          </div>
+          <div>
+            <label for="hours">Hours Worked</label>
+            <input
+              class="input-field"
+              name="hours"
+              placeholder="Insert Number of Hours Worked"
+              value="<%= typeof hours != 'undefined' ? hours : '' %>"
+            />
+        </div>
+            <textarea style="display:none" rows="4" cols="50" name="user_id" form="project"><%= user._id.toString() %></textarea>
+            <br>    
+          </br>
+            <button type="submit" class="btn btn-primary btn-block submit-btn">
+              Submit
+            </button>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<% } %>
+
+<% if (user.email == "office@tpmas.ca") { %>
+  <div class="allusers">
+  <img src="../images/logo.png" style="vertical-align:top">
+  <% for (var i = 0; i < users.length; i++) { %>
+    <% if (users[i].email !== "office@tpmas.ca") { %>
+    <div class="fullcontainer">
+      <a href= "/users/portfolio/<%= users[i]._id.toString() %>" target="_blank">  <%= users[i].name %></a>
+    </div>
+    <% } %>
+  <% } %>
+</div>
+<% } %>
+
+
+
+</body>
+</html>
